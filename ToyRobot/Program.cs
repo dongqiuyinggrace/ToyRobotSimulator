@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace ToyRobot
 {
@@ -6,7 +7,8 @@ namespace ToyRobot
     {
         static void Main(string[] args)
         {
-            Robot robot = new Robot("PLACE 2,2,NORTH\nREPORT\nPLACE 1,2,EAST\nREPORT\nPLACE 1,1,SOUTH\nMOVE\nMOVE\nREPORT");
+            var commands = File.ReadAllText("../../../commands.txt");
+            Robot robot = new Robot(commands);
             robot.Execute();
         }
     }

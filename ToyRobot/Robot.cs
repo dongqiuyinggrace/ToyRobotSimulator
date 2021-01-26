@@ -22,7 +22,7 @@ namespace ToyRobot
 
         public string Execute()
         {
-            string[] commandLines = _commands.Split("\n");
+            string[] commandLines = _commands.Split("\r\n");
             var indexesOfPlacement = new List<int>();
             for (int i = 0; i < commandLines.Length; i++)
             {
